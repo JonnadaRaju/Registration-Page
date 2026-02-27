@@ -20,3 +20,11 @@ def create_students_table():
     ''')
     conn.commit()
     conn.close()
+    
+    
+def get_db():
+    conn = get_db_connection()
+    try:
+        yield conn
+    finally:
+        conn.close()
