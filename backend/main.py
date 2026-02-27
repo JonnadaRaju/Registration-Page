@@ -1,8 +1,18 @@
 from fastapi import FastAPI, Depends
 from database import create_students_table, get_db_connection, get_db
 from models import Student
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 @app.on_event("startup")
 async def startup_event():
