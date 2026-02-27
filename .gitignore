@@ -1,1 +1,8 @@
-myvenv
+# Ignore virtual environment
+myvenv/
+
+# Ignore database file
+registration_form.db
+
+__pycache__/
+
