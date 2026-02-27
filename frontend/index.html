@@ -2,22 +2,25 @@
 <html>
 <head>
   <title>Student Registration</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+<div class="container">
+    <h2>Register Student</h2>
 
-<h2>Register Student</h2>
+    <input id="name" placeholder="Name">
+    <input id="email" placeholder="Email">
+    <input id="phone" placeholder="Phone">
+    <input id="course" placeholder="Course">
 
-<input id="name" placeholder="Name">
-<input id="email" placeholder="Email">
-<input id="phone" placeholder="Phone">
-<input id="course" placeholder="Course">
+    <button onclick="register()">Register</button>
 
-<button onclick="register()">Register</button>
+    <h3>Students</h3>
+    <button onclick="loadStudents()">Load Students</button>
 
-<h3>Students</h3>
-<button onclick="loadStudents()">Load Students</button>
-
-<ul id="list"></ul>
+    <ul id="list"></ul>
+</div>
 
 </body>
 </html>
